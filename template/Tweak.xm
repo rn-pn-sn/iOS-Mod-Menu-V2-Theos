@@ -98,6 +98,13 @@ void setup() {
   dPATCH(ENCRYPT("example__sym"), ENCRYPT("mov w%d, #%d"), 0, 222);
   // standard formatting specifiers are supported (%d, %i, %x, %s, etc.)
   
+  // ===========INTRODUCE: drPATCH===========
+  // rPATCH + dPATCH hybrid
+  // (offset, offset, asm pattern, ... asm args)
+  drPATCH(ENCRYPT("0x4B3F18"), ENCRYPT("0x11C"), ENCRYPT("mov w%d, #%d"), 0, 222);
+  // (symbol, offset, asm pattern, ... asm args)
+  drPATCH(ENCRYPT("example__sym"), ENCRYPT("0x11C"), ENCRYPT("mov w%d, #%d"), 0, 222);
+  
   // ===========INTRODUCE: HOOK===========
   // offset variant:
   HOOK(ENCRYPT("0x4B3F18"), Update_CarLight, old_Update_CarLight);

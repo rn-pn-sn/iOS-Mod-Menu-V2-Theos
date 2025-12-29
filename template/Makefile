@@ -66,7 +66,7 @@ endif
 ifeq ($(ASM_SUPPORT), 1)
     @@PROJECTNAME@@_LDFLAGS += KittyMemory/Deps/Keystone/libs-ios/arm64/libkeystone.a
 else
-    ADDITIONAL_CFLAGS += -DkNO_KEYSTONE
+    @@PROJECTNAME@@_CFLAGS += -DkNO_KEYSTONE
 endif
 
 @@PROJECTNAME@@_LIBRARIES += substrate
