@@ -78,17 +78,17 @@ NSSENCRYPT("Copperplate-Bold")
 ```
 
 ~~**Offsets:**~~
-Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.<br>
-Using it in the new implementation will cause errors.<br>
-So in the new implementation it is enough to use a ENCRYPT.
+<br>Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
+<br>Using it in the new implementation will cause errors.
+<br>So in the new implementation it is enough to use a ENCRYPT.
 ```c
 ENCRYPTOFFSET("0x10047FD90")
 ```
 
 ~~**Hexes:**~~
-Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.<br>
-It was originally completely equivalent to ENCRYPT, so you can still use it if you want without errors.<br>
-So in the new implementation it is enough to use a ENCRYPT.
+<br>Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
+<br>It was originally completely equivalent to ENCRYPT, so you can still use it if you want without errors.
+<br>So in the new implementation it is enough to use a ENCRYPT.
 ```c
 ENCRYPTHEX("0x00F0271E0008201EC0035FD6")
 ```
@@ -118,8 +118,8 @@ PATCH(ENCRYPT("example__sym"), ENCRYPT("ret"));
 // don't forget enable ASM_SUPPORT in makefile for usage
 ```
 * rPATCH - relative PATCH (root + additional offset)
-<br>Relative patches allow you to speed up patch creation if you are sure that the offsets within methods rarely change.<br>
-This is an extremely unstable due to the hard offsets... don't forget to check the logs to identify outdated offsets.
+<br>Relative patches allow you to speed up patch creation if you are sure that the offsets within methods rarely change.
+<br>This is an extremely unstable due to the hard offsets... don't forget to check the logs to identify outdated offsets.
 ```c
 // this base (offset, offset, hex) variant:
 rPATCH(ENCRYPT("0x4B3F18"), ENCRYPT("0x11C"), ENCRYPT("30 00 00 14"));
