@@ -3,7 +3,7 @@
 <div style="text-align: center;">
 <b>Sample UI of the Menu:</b><br>
 
-![](KAmIWxN.gif)
+![](imgur-rOKkoXA.gif)
 </div>
 
 <br>
