@@ -247,17 +247,17 @@ void setupMenu() {
   float minTime = 0.5f; // reduce for faster devices
 
   int attempts = (int)(maxTime / minTime);
-  static BOOL isMenuSetup = NO;
 
   for (int i = 1; i <= attempts; i++) {
     float delay = minTime * i;
     
     timer(delay) {
-      if (isMenuSetup) return;
-      
-      if ([menu readyWindow] || i == attempts) {
-        setupMenu();
-        isMenuSetup = YES;
+      if (![menu inited]) {
+        if([menu needInit]) { 
+          setupMenu();
+          return;
+        }
+        if(i == attempts) [menu showPopup:NSSENCRYPT("MENU FAILED") description:NSSENCRYPT("Failed create menu: !needInit + timeout")];
       }
     });
   }

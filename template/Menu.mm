@@ -50,10 +50,19 @@ UIWindow *mainWindow;
 // global variabls, extern in Macros.h
 Menu *menu = [Menu alloc];
 Switches *switches = [Switches alloc];
--(bool)readyWindow {
+-(bool)inited {
+    return MenuInited;
+}
+-(bool)needInit {
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    if([UIApplication sharedApplication].keyWindow != NULL) return true; else return false;
+    if([UIApplication sharedApplication].keyWindow != NULL) {
+        if(!MenuInited) {
+            MenuInited = true;
+            return MenuInited;
+        }
+    }
+    return false;
     #pragma clang diagnostic pop
 }
 

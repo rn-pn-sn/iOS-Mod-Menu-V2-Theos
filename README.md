@@ -29,8 +29,8 @@
   * Write unlimited bytes to a offset
   * Supports ASM instructions (Keystone assembler)(iOS 14+)
 
+* Adaptive initialisation for all devices
 * Compile-time string encryption
-* Adaptive launch tweak
 * Open Source Menu
 
 <br>
