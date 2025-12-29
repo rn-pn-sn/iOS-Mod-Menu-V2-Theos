@@ -3,7 +3,7 @@
 <div style="text-align: center;">
 <b>Sample UI of the Menu:</b><br>
 
-![](43c8d04f39be19f4.gif)
+![](KAmIWxN.gif)
 </div>
 
 <br>
@@ -77,18 +77,18 @@ ENCRYPT("I am a c-string")
 NSSENCRYPT("Copperplate-Bold")
 ```
 
-~~Offsets:~~
-! is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
-! using it in the new implementation will cause errors.
-! so in the new implementation it is enough to use a ENCRYPT.
+~~**Offsets:**~~
+Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
+Using it in the new implementation will cause errors.
+So in the new implementation it is enough to use a ENCRYPT.
 ```c
 ENCRYPTOFFSET("0x10047FD90")
 ```
 
-~~Hexes:~~
-! is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
-! It was originally completely equivalent to ENCRYPT, so you can still use it if you want without errors.
-! so in the new implementation it is enough to use a ENCRYPT.
+~~**Hexes:**~~
+Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
+It was originally completely equivalent to ENCRYPT, so you can still use it if you want without errors.
+So in the new implementation it is enough to use a ENCRYPT.
 ```c
 ENCRYPTHEX("0x00F0271E0008201EC0035FD6")
 ```
@@ -118,8 +118,8 @@ PATCH(ENCRYPT("example__sym"), ENCRYPT("ret"));
 // don't forget enable ASM_SUPPORT in makefile for usage
 ```
 * rPATCH - relative PATCH (root + additional offset)
-Relative patches allow you to speed up patch creation if you are sure that the offsets within methods rarely change
-! This is an extremely unstable due to the hard offsets... don't forget to check the logs to identify outdated offsets
+Relative patches allow you to speed up patch creation if you are sure that the offsets within methods rarely change.
+This is an extremely unstable due to the hard offsets... don't forget to check the logs to identify outdated offsets.
 ```c
 // this base (offset, offset, hex) variant:
 rPATCH(ENCRYPT("0x4B3F18"), ENCRYPT("0x11C"), ENCRYPT("30 00 00 14"));
