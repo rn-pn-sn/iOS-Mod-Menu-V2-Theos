@@ -77,8 +77,8 @@ ENCRYPT("I am a c-string")
 NSSENCRYPT("Copperplate-Bold")
 ```
 
-~~**Offsets:**~~
-<br>Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
+**Offsets:**
+<br>Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation (new macros, hook functions and etc.).
 <br>Using it in the new implementation will cause errors.
 <br>So in the new implementation it is enough to use a ENCRYPT.
 ```c
