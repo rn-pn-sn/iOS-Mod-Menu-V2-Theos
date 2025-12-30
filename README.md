@@ -78,17 +78,17 @@ NSSENCRYPT("Copperplate-Bold")
 ```
 
 **Offsets:**
-<br>Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation (new macros, hook functions and etc.).
-<br>Using it in the new implementation will cause errors.
+<br>Is DEPRECATED because the new macros automatically detects the input data type, but the code is still available if you need your own implementation (new macros, hook functions and etc.).
+<br>Using it in the new macros will cause errors.
 <br>So in the new implementation it is enough to use a ENCRYPT.
 ```c
 ENCRYPTOFFSET("0x10047FD90")
 ```
 
 ~~**Hexes:**~~
-<br>Is DEPRECATED because the new implementation automatically detects the input data type, but the code is still available if you need your own implementation.
+<br>Is DEPRECATED because the new macros automatically detects the input data type, but the code is still available if you need your own implementation.
 <br>It was originally completely equivalent to ENCRYPT, so you can still use it if you want without errors.
-<br>So in the new implementation it is enough to use a ENCRYPT.
+<br>So in the new macros it is enough to use a ENCRYPT.
 ```c
 ENCRYPTHEX("0x00F0271E0008201EC0035FD6")
 ```
